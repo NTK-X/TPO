@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+#cabecera {
+    display: flex;
+    flex-direction: column;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+#cabecera > div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    /* Estilo 1: */
+    justify-content: right;
+    
+    /* Estilo 2: */
+    /*justify-content: space-between;*/
+}
+
+#cabecera > div:nth-child(1) > a{
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+#cabecera > div:nth-child(2){
+    background-image: url(../Imagenes/encabezadoEditado.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    text-align: center;
+}
+
+#cabecera > div:nth-child(2) > h1 { 
+    color: white;
+    text-shadow: 0 0 3px black;
+}
