@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body > h2 {
+    background-color: rgba(255, 252, 249, 0.87);
+    padding-left: 1rem;
+    font-family: "Roboto", sans-serif;
+    padding-top: 0.5rem;
+    color: rgb(135, 93, 25);
+}
+
+iframe {
+    height: 20rem;
+    width: 30rem;
+    border-radius: 1rem;
+    margin-left: 5rem;
+}
+
+.claseSedes {
+    background-color: rgba(255, 252, 249, 0.87);
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+.claseSedes > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body > div.claseSedes > div > div {
+    width: 20rem;
+    height: 13rem;
+    padding: 2.5rem;
+    align-self: center;
+    align-content: center;
+    background-color: rgba(186, 115, 0, 0.853);
+    border: 1px black;
+    /*border-style: solid;*/
+    border-radius: 0.5rem;
+    color: white;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body > div.claseSedes > div > div > ul > li {
+    padding: 0.3em;
+}
+
+body > div.claseSedes > div > div > ul > li > a:visited {
+    color: inherit;
+}
+
+body > div.claseSedes > div > div > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+body > div.claseSedes > div > div > ul > li > a{
+    color: white;
+    text-decoration: none;  
+}
+
+@media (max-width: 1000px){
+    iframe {
+        align-self: center;
+        width: 25rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+    }
+
+    .claseSedes > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    body > div.claseSedes > div > div {
+        width: 16rem;
+        height: 13rem;
+        padding: 1.5rem;
+    }
+
+    body > div.claseSedes > div > div > ul > li {
+        padding: 0;
+    }
+    
+}
+
+@media (max-width: 750px){
+
+    .claseSedes > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    iframe {
+        align-self: center;
+        width: 25rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+
+    body > div.claseSedes > div > div {
+        width: 25rem;
+        height: 9rem;
+        padding: 0.5rem;
+        
+    }
+
+    body > div.claseSedes > div > div > ul > li {
+        padding: 0;
+    }
+    
+}

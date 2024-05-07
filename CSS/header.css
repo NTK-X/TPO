@@ -1,4 +1,4 @@
-* {
+ *{
     margin: 0;
 }
 
@@ -7,11 +7,11 @@
     flex-direction: column;
 }
 
-a:visited {
+#cabecera > div > a:visited {
     color: inherit;
 }
 
-a:hover {
+#cabecera > div > a:hover {
     background-color: rgb(240, 240, 240);
 }
 
