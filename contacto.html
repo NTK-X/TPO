@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form method="post" action="/">
+            <fieldset>
+                <legend>Contacto</legend>
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+                </div>
+                <div>
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Ingrese su celular">
+                </div>
+                <div>
+                    <datalist id="carreras">
+                        <option value="Programacion"></option>
+                        <option value="Relaciones internacionales"></option>
+                        <option value="Comercio exterior"></option>
+                        <option value="Psicologia"></option>
+                        <option value="Derecho"></option>
+                        <option value="Medicina"></option>
+                        <option value="Economia"></option>
+                        <option value="Arquitectura"></option>
+                    </datalist>
+                    <label>
+                        Carrera a consultar
+                        <input list="carreras" placeholder="Seleccione carrera" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="mensaje">Consulta:</label>
+                    <input type="text" id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
