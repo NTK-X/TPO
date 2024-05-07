@@ -44,3 +44,9 @@
     color: white;
     text-shadow: 0 0 3px black;
 }
+
+@media (max-width: 400px){
+    #cabecera > div:nth-child(1) > a{
+        padding: 0.5rem;
+    }
+}

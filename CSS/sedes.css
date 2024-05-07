@@ -2,7 +2,6 @@
 
 body > h2 {
     background-color: rgba(255, 252, 249, 0.87);
-    padding-left: 1rem;
     font-family: "Roboto", sans-serif;
     padding-top: 0.5rem;
     color: rgb(135, 93, 25);
@@ -13,7 +12,6 @@ iframe {
     height: 20rem;
     width: 30rem;
     border-radius: 1rem;
-    margin-left: 5rem;
 }
 
 .claseSedes {
@@ -22,26 +20,24 @@ iframe {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 5rem;
     justify-content: center;
+    gap: 5rem;
 }
 
 .claseSedes > div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 8rem;
 }
 
 body > div.claseSedes > div > div {
-    margin-left: 5rem;
     width: 20rem;
     height: 13rem;
     padding: 2.5rem;
     align-self: center;
     align-content: center;
     background-color: rgba(186, 115, 0, 0.853);
-    border: 1px black;
-    /*border-style: solid;*/
     border-radius: 0.5rem;
     color: white;
     font-family: "Tajawal", sans-serif;
@@ -74,14 +70,11 @@ body > div.claseSedes > div > div > ul > li > a{
         border-radius: 0.5rem;
     }
 
-    .claseSedes {
-        width: 100vw;
-    }
-
     .claseSedes > div {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 3rem;
     }
 
     body > div.claseSedes > div > div {
@@ -124,4 +117,34 @@ body > div.claseSedes > div > div > ul > li > a{
         padding: 0;
     }
     
+}
+
+@media (max-width: 450px){
+    
+    iframe {
+        align-self: center;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+
+    .claseSedes > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    
+    body > div.claseSedes > div > div {
+        width: 20rem;
+        height: 10rem;
+        padding: 0.5rem;
+        
+    }
+    
+    body > div.claseSedes > div > div > ul > li {
+        padding: 0;
+    }
 }
