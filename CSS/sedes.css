@@ -6,6 +6,7 @@ body > h2 {
     font-family: "Roboto", sans-serif;
     padding-top: 0.5rem;
     color: rgb(135, 93, 25);
+    text-align: center;
 }
 
 iframe {
@@ -24,13 +25,13 @@ iframe {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 5rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .claseSedes > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 body > div.claseSedes > div > div {
@@ -92,7 +93,7 @@ body > div.claseSedes > div > div > ul > li > a{
     
 }
 
-@media (max-width: 750px){
+@media (max-width: 820px){
 
     .claseSedes > div {
         display: flex;
