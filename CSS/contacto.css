@@ -50,9 +50,8 @@ textarea {
     box-sizing: border-box;
 }
 
-/* Estilo específico para el cuadro de texto "Consulta" */
 #mensaje {
-    height: 150px; /* Ajusta la altura según lo necesites */
+    height: 150px; 
 }
 
 input[type="submit"] {

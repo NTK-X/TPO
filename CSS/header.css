@@ -20,6 +20,7 @@
     flex-direction: row;
     /* Estilo 1: */
     justify-content: right;
+    font-family: Arial, sans-serif;
     
     /* Estilo 2: */
     /*justify-content: space-between;*/
