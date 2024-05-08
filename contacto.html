@@ -25,9 +25,9 @@
         </div>
     </div>
 
-    <section>
-        <form method="post" action="/">
-            <fieldset>
+    <section class="seccion">
+        <form class="formulario" method="post" action="/">
+            <fieldset class="campos">
                 <legend>Contacto</legend>
                 <div>
                     <label for="name">Nombre:</label>
@@ -66,10 +66,13 @@
                     <input type="text" id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required>
                 </div>
                 <div>
-                    <input type="submit" value="Enviar">
+                    <input class="boton" type="submit" value="Enviar" id=botonEnviar>
                 </div>
             </fieldset>
         </form>
     </section>
+
+    <script src="/Js/contacto.js"></script>
+
 </body>
 </html>
