@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/header.css" type="text/css" />
     <link rel="stylesheet" href="./CSS/contacto.css" type="text/css" />
+    <script src="/Js/contacto.js"></script>
           
 </head>
 <body>
@@ -26,7 +27,7 @@
     </div>
 
     <section class="seccion">
-        <form class="formulario" method="post" action="/">
+        <form class="formulario" method="post">
             <fieldset class="campos">
                 <legend>Contacto</legend>
                 <div>
@@ -63,7 +64,7 @@
                 </div>
                 <div>
                     <label for="mensaje">Consulta:</label>
-                    <input type="text" id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required>
+                    <textarea type="text" id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required> </textarea>
                 </div>
                 <div>
                     <input class="boton" type="submit" value="Enviar" id=botonEnviar>
@@ -71,8 +72,6 @@
             </fieldset>
         </form>
     </section>
-
-    <script src="/Js/contacto.js"></script>
 
 </body>
 </html>
