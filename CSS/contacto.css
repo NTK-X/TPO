@@ -65,3 +65,14 @@ textarea {
 .boton:hover {
     background-color: #0c778d;
 }
+
+.invalido{
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+}
+
+.valido{
+
+    border: none;
+    box-shadow: none;
+}

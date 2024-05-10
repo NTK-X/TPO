@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/header.css" type="text/css" />
-    <link rel="stylesheet" href="./CSS/contacto.css" type="text/css" />
-    
-          
+    <link rel="stylesheet" href="./CSS/contacto.css" type="text/css" />       
 </head>
 <body>
 
@@ -31,8 +29,8 @@
             <fieldset class="campos">
                 <legend>Contacto</legend>
                 <div>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                 </div>
                 <div>
                     <label for="apellido">Apellido:</label>
@@ -59,12 +57,12 @@
                     </datalist>
                     <label>
                         Carrera a consultar
-                        <input list="carreras" placeholder="Seleccione carrera" required>
+                        <input list="carreras" name="carrera" placeholder="Seleccione carrera" required>
                     </label>
                 </div>
                 <div>
                     <label for="mensaje">Consulta:</label>
-                    <textarea type="text" id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required> </textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escriba aqui su consulta" required> </textarea>
                 </div>
                 <div>
                     <input class="boton" type="submit" value="Enviar" id="botonEnviar">
