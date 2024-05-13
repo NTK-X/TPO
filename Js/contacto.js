@@ -9,10 +9,11 @@ const mensaje = document.querySelector("[name=mensaje]");
 const carreras = ["Programación", "Relaciones internacionales", "Comercio exterior", 
 "Psicología", "Derecho", "Medicina", "Economía", "Arquitectura"];
 
-const validacionFocus = (e) => {
+const validarFocus = (e) => {
     const campo = e.target;
     if(campo.value === "Error, este campo no puede estar vacio" || 
-       campo.value === "Error, el celular debe tener entre 8 y 11 caracteres"
+       campo.value === "Error, el celular debe tener entre 8 y 11 caracteres" ||
+       campo.value === "Por favor ingrese un email valido"
     ){
         campo.value = "";
         campo.classList.remove("invalido");
@@ -26,7 +27,7 @@ const validacionFocus = (e) => {
     }
 }
 
-const validacionPerdidaFocus = (e) => {
+const validarPerdidaFocus = (e) => {
     const campo = e.target;
     const nombreValor = e.target.value;
 
@@ -36,7 +37,7 @@ const validacionPerdidaFocus = (e) => {
     }
 }
 
-const validacionCelular = (e) => {
+const validarCelular = (e) => {
 
     const regexTelefono = /^\d{8,11}$/;
 
@@ -48,7 +49,19 @@ const validacionCelular = (e) => {
     }
 }
 
-const validacionCarrera = (e) =>{
+const validarEmail = (e) => {
+
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!regexEmail.test(e.target.value)){
+        e.target.value = "Por favor ingrese un email valido"
+        e.target.classList.add("invalido");
+    }else{
+        e.target.classList.remove("invalido");
+    }
+}
+
+const validarCarrera = (e) =>{
 
     switch (e.target.value){
 
@@ -84,15 +97,17 @@ const validacionCarrera = (e) =>{
 
 
 
-nombre.addEventListener("focus", validacionFocus);
-nombre.addEventListener("blur", validacionPerdidaFocus);
+nombre.addEventListener("focus", validarFocus);
+nombre.addEventListener("blur", validarPerdidaFocus);
 
-apellido.addEventListener("focus", validacionFocus);
-apellido.addEventListener("blur", validacionPerdidaFocus);
+apellido.addEventListener("focus", validarFocus);
+apellido.addEventListener("blur", validarPerdidaFocus);
 
-carrera.addEventListener("focus", validacionFocus);
-carrera.addEventListener("blur", validacionCarrera);
+carrera.addEventListener("focus", validarFocus);
+carrera.addEventListener("blur", validarCarrera);
 
-celular.addEventListener("focus", validacionFocus);
-celular.addEventListener("blur", validacionCelular);
+celular.addEventListener("focus", validarFocus);
+celular.addEventListener("blur", validarCelular);
 
+email.addEventListener("focus", validarFocus);
+email.addEventListener("blur", validarEmail);
