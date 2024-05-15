@@ -137,37 +137,37 @@ formulario.addEventListener("submit", function(e) {
 
     if(errores.includes(nombre.value)||nombre.value===""){
         e.preventDefault();
-        alert("ERROR");
+        nombre.classList.add("errorSubmit");
     }
 
     if(errores.includes(apellido.value)||apellido.value===""){
         e.preventDefault();
-        alert("ERROR");
+        apellido.classList.add("errorSubmit");
     }    
 
     if (dni.files.length === 0) {  
         e.preventDefault();
-        alert("ERROR");
+        dni.classList.add("errorSubmit");
     }
 
     if(errores.includes(email.value)||email.value===""){
         e.preventDefault();
-        alert("ERROR");
+        email.classList.add("errorSubmit");
     }
 
     if(errores.includes(celular.value)||celular.value===""){
         e.preventDefault();
-        alert("ERROR");
+        celular.classList.add("errorSubmit");
     }
 
     if(errores.includes(carrera.value)||carrera.value===""){
         e.preventDefault();
-        alert("ERROR");
+        carrera.classList.add("errorSubmit");
     }
 
     if(mensaje.value === ""){
         e.preventDefault();
-        alert("Error");
+        mensaje.classList.add("errorSubmit");
     }
 });
 
