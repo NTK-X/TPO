@@ -30,6 +30,7 @@
     text-align: center;
     text-decoration: none;
     padding: 1rem;
+    color: black;
 }
 
 #cabecera > div:nth-child(2){
