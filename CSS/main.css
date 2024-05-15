@@ -59,6 +59,31 @@
     cursor: pointer;
 }
 
+#HeroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+
+#HeroSection > p{
+    font-size: 1.3em;
+    margin-left: 0.2rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+#HeroSection > div{
+    padding-left: 0.5%;
+    padding-right: 49.5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 50%;
+}
+
 @media (max-width: 1400px){
 
     .contenido{
@@ -119,6 +144,10 @@
         opacity: 1;
         transform: scale(1.1);
         cursor: pointer;
+    }
+
+    #HeroSection {
+        font-size: 1.1em;
     }
 }
 
@@ -183,6 +212,10 @@
         transform: scale(1.1);
         cursor: pointer;
     }
+
+    #HeroSection {
+        font-size: 1.05em;
+    }
 }
 
 @media (max-width: 700px){
@@ -245,5 +278,9 @@
         opacity: 1;
         transform: scale(1.1);
         cursor: pointer;
+    }
+
+    #HeroSection {
+        font-size: 0.91em;
     }
 }
