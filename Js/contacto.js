@@ -2,7 +2,7 @@
 const formulario = document.getElementById("formularioContacto");
 const nombre = document.querySelector("[name=nombre]");
 const apellido = document.querySelector("[name=apellido]");
-const inputPDF = document.getElementById("dni");
+const dni = document.getElementById("dni");
 const eliminarArchivoBtn = document.getElementById("eliminarArchivo");
 const email = document.querySelector("[name=email]");
 const celular = document.querySelector("[name=celular]");
@@ -13,16 +13,12 @@ const mensaje = document.querySelector("[name=mensaje]");
 const carreras = ["Programación", "Relaciones internacionales", "Comercio exterior", 
 "Psicología", "Derecho", "Medicina", "Economía", "Arquitectura"];
 
+const errores = ["Error, este campo no puede estar vacio", "Error, el celular debe tener entre 8 y 11 caracteres",
+"Por favor ingrese un email valido", "Opción incorrecta"];
+
 const validarFocus = (e) => {
     const campo = e.target;
-    if(campo.value === "Error, este campo no puede estar vacio" || 
-       campo.value === "Error, el celular debe tener entre 8 y 11 caracteres" ||
-       campo.value === "Por favor ingrese un email valido"
-    ){
-        campo.value = "";
-        campo.classList.remove("invalido");
-    }
-    else if(campo.value === "Opción incorrecta" || carreras.includes(campo.value)){
+    if(errores.includes(campo.value) || carreras.includes(campo.value)){
         campo.value = "";
         campo.classList.remove("invalido");
     }
@@ -33,35 +29,37 @@ const validarFocus = (e) => {
 
 const validarPerdidaFocus = (e) => {
     const campo = e.target;
-    const nombreValor = e.target.value;
 
-    if((nombreValor.trim().length < 1) || (nombreValor === "Error, este campo no puede estar vacio")){
+    if((campo.value.trim().length < 1) || (errores.includes(campo.value))){
         campo.classList.add("invalido");
-        e.target.value = "Error, este campo no puede estar vacio"
+        campo.value = "Error, este campo no puede estar vacio"
     }
 }
 
 const validarCelular = (e) => {
 
+    const campo = e.target;
     const regexTelefono = /^\d{8,11}$/;
 
-    if(!regexTelefono.test(e.target.value)){
-        e.target.value = "Error, el celular debe tener entre 8 y 11 caracteres"
-        e.target.classList.add("invalido");
+    if(!regexTelefono.test(campo.value)){
+        campo.value = "Error, el celular debe tener entre 8 y 11 caracteres"
+        campo.classList.add("invalido");
     }else{
-        e.target.classList.remove("invalido");
+        campo.classList.remove("invalido");
     }
 }
 
 const validarEmail = (e) => {
-
+    const campo = e.target;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if(!regexEmail.test(e.target.value)){
-        e.target.value = "Por favor ingrese un email valido"
-        e.target.classList.add("invalido");
+
+    if(!regexEmail.test(campo.value)||campo.value===""){
+        campo.classList.add("invalido");
+        campo.value="Por favor ingrese un email valido";
+
     }else{
-        e.target.classList.remove("invalido");
+        campo.classList.remove("invalido");
     }
 }
 
@@ -99,25 +97,22 @@ const validarCarrera = (e) =>{
     }
 }
 
-inputPDF.addEventListener("change", function() {
-    
-    if (inputPDF.files.length > 0) {
+const crearBotonEliminar = (e) =>{
+    const campo = e.target;
+
+    if (campo.files.length > 0) {
         eliminarArchivoBtn.style.display = "inline-block"; 
     }
-});
+}
 
-eliminarArchivoBtn.addEventListener("click", function() {
-    inputPDF.value = null;
+
+const eliminarArchivo = (e) =>{
+
+    dni.value = null;
     eliminarArchivoBtn.style.display = "none";
-});
 
-formulario.addEventListener("submit", function(e) {
-    if (inputPDF.files.length === 0) {
-        // Mostrar un mensaje de error si no se ha seleccionado ningún archivo
-        alert("Por favor, seleccione un archivo PDF.");
-        e.preventDefault(); // Evitar el envío del formulario
-    }
-});
+}
+
 
 nombre.addEventListener("focus", validarFocus);
 nombre.addEventListener("blur", validarPerdidaFocus);
@@ -125,15 +120,56 @@ nombre.addEventListener("blur", validarPerdidaFocus);
 apellido.addEventListener("focus", validarFocus);
 apellido.addEventListener("blur", validarPerdidaFocus);
 
-carrera.addEventListener("focus", validarFocus);
-carrera.addEventListener("blur", validarCarrera);
-
-celular.addEventListener("focus", validarFocus);
-celular.addEventListener("blur", validarCelular);
+dni.addEventListener("change", crearBotonEliminar);
+eliminarArchivoBtn.addEventListener("click", eliminarArchivo);
 
 email.addEventListener("focus", validarFocus);
 email.addEventListener("blur", validarEmail);
 
+celular.addEventListener("focus", validarFocus);
+celular.addEventListener("blur", validarCelular);
+
+carrera.addEventListener("focus", validarFocus);
+carrera.addEventListener("blur", validarCarrera);
+
+
+formulario.addEventListener("submit", function(e) {
+
+    if(errores.includes(nombre.value)||nombre.value===""){
+        e.preventDefault();
+        alert("ERROR");
+    }
+
+    if(errores.includes(apellido.value)||apellido.value===""){
+        e.preventDefault();
+        alert("ERROR");
+    }    
+
+    if (dni.files.length === 0) {  
+        e.preventDefault();
+        alert("ERROR");
+    }
+
+    if(errores.includes(email.value)||email.value===""){
+        e.preventDefault();
+        alert("ERROR");
+    }
+
+    if(errores.includes(celular.value)||celular.value===""){
+        e.preventDefault();
+        alert("ERROR");
+    }
+
+    if(errores.includes(carrera.value)||carrera.value===""){
+        e.preventDefault();
+        alert("ERROR");
+    }
+
+    if(mensaje.value === ""){
+        e.preventDefault();
+        alert("Error");
+    }
+});
 
 
 
