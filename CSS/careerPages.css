@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
 }
 
 .career {
@@ -12,6 +13,19 @@
     justify-content: center;
     width: 100%;
     gap: 30px;
+}
+
+.career::before {
+ content: "";
+    background-image: url(../Imagenes/encabezadoEditado.jpg);
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+    z-index: -100;
 }
 
 h1 {
