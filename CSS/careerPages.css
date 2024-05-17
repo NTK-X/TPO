@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+.career {
+  /* border: solid purple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.career::before {
+  content: "";
+  background-image: url(../Imagenes/encabezadoEditado.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+  z-index: -100;
+}
+
+h1 {
+  font-size: 50px;
+  /* border: solid green; */
+}
+
+img {
+  width: 50%;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.career_content {
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 30px;
+  border-radius: 50px;
+}
+
+.career_content_img {
+  /* border: 2px solid yellow; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 50px;
+  background-color: rgba(150, 70, 70, 0.2);
+}
+
+.career_content_info {
+  /* border: solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  gap: 20px;
+  list-style-position: inside;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: rgba(150, 70, 70, 0.2);
+}
+
+li {
+  gap: 20px;
+}
+
+/**Breakpoints**/
+
+@media (max-width: 750px) {
+  * {
+    font-size: 1em;
+  }
+
+  .career_content_img {
+    display: none;
+  }
+
+  .career_content {
+    padding: 10px;
+  }
+
+  .career {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  * {
+    font-size: 0.95em;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .career {
+    gap: 5px;
+  }
+}

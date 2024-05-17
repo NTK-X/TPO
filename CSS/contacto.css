@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+
+.seccion::before {
+    content: "";
+  background-image: url(../Imagenes/encabezadoEditado.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+  z-index: -100;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.campos {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+input[list],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#mensaje {
+    height: 150px;
+  
+}
+
+.boton {
+    background-color: #358697;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #0c778d;
+}
+
+.invalido{
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+}
+
+.valido{
+
+    border: none;
+    box-shadow: none;
+}
+
+#eliminarArchivo{
+    display: none;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+  }
+
+  .errorSubmit{
+
+    animation: shake 0.1s ease-in-out;
+
+  }
