@@ -9,6 +9,19 @@
     
 }
 
+body::before {
+    content: "";
+    background-image: url(../Imagenes/encabezadoEditado.jpg);
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+    z-index: -100;
+  }
+
 .tituloh2{
      
     text-align: center;
