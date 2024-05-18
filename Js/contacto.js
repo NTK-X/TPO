@@ -36,19 +36,6 @@ const validarPerdidaFocus = (e) => {
     }
 }
 
-const validarCelular = (e) => {
-
-    const campo = e.target;
-    const regexTelefono = /^\d{8,11}$/;
-
-    if(!regexTelefono.test(campo.value)){
-        campo.value = "Error, el celular debe tener entre 8 y 11 caracteres"
-        campo.classList.add("invalido");
-    }else{
-        campo.classList.remove("invalido");
-    }
-}
-
 const validarEmail = (e) => {
     const campo = e.target;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -58,6 +45,19 @@ const validarEmail = (e) => {
         campo.classList.add("invalido");
         campo.value="Por favor ingrese un email valido";
 
+    }else{
+        campo.classList.remove("invalido");
+    }
+}
+
+const validarCelular = (e) => {
+
+    const campo = e.target;
+    const regexTelefono = /^\d{8,11}$/;
+
+    if(!regexTelefono.test(campo.value)){
+        campo.value = "Error, el celular debe tener entre 8 y 11 caracteres"
+        campo.classList.add("invalido");
     }else{
         campo.classList.remove("invalido");
     }
@@ -138,36 +138,53 @@ formulario.addEventListener("submit", function(e) {
     if(errores.includes(nombre.value)||nombre.value===""){
         e.preventDefault();
         nombre.classList.add("errorSubmit");
+        nombre.classList.add("invalido");
+        nombre.value = "Error, este campo no puede estar vacio"
     }
 
     if(errores.includes(apellido.value)||apellido.value===""){
         e.preventDefault();
         apellido.classList.add("errorSubmit");
+        apellido.classList.add("invalido");
+        apellido.value = "Error, este campo no puede estar vacio"
     }    
 
     if (dni.files.length === 0) {  
         e.preventDefault();
         dni.classList.add("errorSubmit");
+        dni.classList.add("invalido");
     }
 
     if(errores.includes(email.value)||email.value===""){
         e.preventDefault();
         email.classList.add("errorSubmit");
+        email.classList.add("invalido");
+        email.value="Por favor ingrese un email valido";
+
+        
     }
 
     if(errores.includes(celular.value)||celular.value===""){
         e.preventDefault();
         celular.classList.add("errorSubmit");
+        celular.classList.add("invalido");
+        celular.value="Error, el celular debe tener entre 8 y 11 caracteres";
+
     }
 
     if(errores.includes(carrera.value)||carrera.value===""){
         e.preventDefault();
         carrera.classList.add("errorSubmit");
+        carrera.classList.add("invalido");
+        carrera.value="Opción incorrecta";
+
     }
 
-    if(mensaje.value === ""){
+    if(mensaje.value.trim().length < 0){
         e.preventDefault();
         mensaje.classList.add("errorSubmit");
+        mensaje.classList.add("invalido");
+        
     }
 });
 
