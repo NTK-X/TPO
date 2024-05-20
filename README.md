@@ -2,9 +2,9 @@
 Trabajo Practico Obligatorio Grupo 11
 
 Pagina Prinipal
-* Header (Logo + Nav) -----Nacho
+* Header 
 * Seccion HERO
-* Seccion Carreras ---- Benja
+* Seccion Carreras 
 * Footer
 
 Pagina de Sedes
@@ -15,7 +15,7 @@ Pagina Sobre Nosotros
 Pagina de Contacto
 * Formulario
 
-PAgina de Carreras ---- Angel
+PAgina de Carreras 
 *Foto de la carrera
 *Breve descripcion
-*Plan de Estudio
+
