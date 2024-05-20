@@ -45,7 +45,17 @@
 #cabecera > div:nth-child(2) > h1 { 
     color: white;
     text-shadow: 0 0 10px black;
+    
 }
+
+
+#HeroSection > div > p{
+
+    display: block;
+    margin: 15px;
+    text-align: center;
+}
+
 
 @media (max-width: 425px){
     #cabecera > div:nth-child(1) > a{
@@ -69,5 +79,23 @@ footer{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     background-color: black;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none; 
+    margin-left: 5px;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer a:active {
     color: white;
 }
