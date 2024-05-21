@@ -2,7 +2,7 @@
 Trabajo Practico Obligatorio Grupo 11
 
 Pagina Prinipal
-* Header (Logo + Nav) 
+* Header 
 * Seccion HERO
 * Seccion Carreras 
 * Footer
